@@ -80,7 +80,7 @@ resource "aws_route_table_association" "public_subnet_az2_rt_association" {
 resource "aws_subnet" "private_app_subnet_az1" {
     vpc_id = aws_vpc.vpc.id
     cidr_block = var.private_app_subnet_az1_cidr
-    availability_zone = data.aws_availability_zones.availability_zones.name[0]
+    availability_zone = data.aws_availability_zones.availability_zones.names[0]
 
     tags = {
       Name = "{var.project_name}-private_app_subnet_az1"
@@ -93,7 +93,7 @@ resource "aws_subnet" "private_app_subnet_az1" {
 resource "aws_subnet" "private_app_subnet_az2" {
     vpc_id = aws_vpc.vpc.id
     cidr_block = var.private_app_subnet_az2_cidr
-    availability_zone = data.aws_availability_zones.availability_zones.name[1]
+    availability_zone = data.aws_availability_zones.availability_zones.names[1]
 
     tags = {
       Name = "{var.project_name}-private_app_subnet_az2"
@@ -106,7 +106,7 @@ resource "aws_subnet" "private_app_subnet_az2" {
 resource "aws_subnet" "private_data_subnet_az1" {
     vpc_id = aws_vpc.vpc.id
     cidr_block = var.private_data_subnet_az1_cidr
-    availability_zone = data.aws_availability_zones.availability_zones.name[0]
+    availability_zone = data.aws_availability_zones.availability_zones.names[0]
 
     tags = {
       Name = "{var.project_name}-private_data_subnet_az1"
@@ -119,7 +119,7 @@ resource "aws_subnet" "private_data_subnet_az1" {
 resource "aws_subnet" "private_data_subnet_az2" {
     vpc_id = aws_vpc.vpc.id
     cidr_block = var.private_data_subnet_az2_cidr
-    availability_zone = data.aws_availability_zones.availability_zones.name[0]
+    availability_zone = data.aws_availability_zones.availability_zones.names[0]
 
     tags = {
       Name = "{var.project_name}-private_data_subnet_az2"
