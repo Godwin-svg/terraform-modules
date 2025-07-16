@@ -4,7 +4,7 @@ resource "aws_vpc" "vpc" {
     instance_tenancy = "default"
 
     tags = {
-      Name = "{var.project_name}-vpc"
+      Name = "${var.project_name}-vpc"
     }
     
   
@@ -15,7 +15,7 @@ resource "aws_internet_gateway" "internet_gateway" {
     vpc_id = aws_vpc.vpc.id 
 
     tags = {
-      Name = "{var.project_name}-internet-gateway"
+      Name = "${var.project_name}-internet-gateway"
     }
   
 }
@@ -31,7 +31,7 @@ availability_zone = data.aws_availability_zones.availability_zones.names[0]
 map_public_ip_on_launch = true
 
 tags = {
-      Name = "{var.project_name}-public_subnet_az1"
+      Name = "${var.project_name}-public_subnet_az1"
     }
 
 }
@@ -45,7 +45,7 @@ map_public_ip_on_launch = true
 availability_zone = data.aws_availability_zones.availability_zones.names[1]
 
 tags = {
-      Name = "{var.project_name}-public_subnet_az2"
+      Name = "${var.project_name}-public_subnet_az2"
     }
 
 }
@@ -83,7 +83,7 @@ resource "aws_subnet" "private_app_subnet_az1" {
     availability_zone = data.aws_availability_zones.availability_zones.names[0]
 
     tags = {
-      Name = "{var.project_name}-private_app_subnet_az1"
+      Name = "${var.project_name}-private_app_subnet_az1"
     }
 
 }
@@ -96,7 +96,7 @@ resource "aws_subnet" "private_app_subnet_az2" {
     availability_zone = data.aws_availability_zones.availability_zones.names[1]
 
     tags = {
-      Name = "{var.project_name}-private_app_subnet_az2"
+      Name = "${var.project_name}-private_app_subnet_az2"
     }
 
 }
@@ -109,7 +109,7 @@ resource "aws_subnet" "private_data_subnet_az1" {
     availability_zone = data.aws_availability_zones.availability_zones.names[0]
 
     tags = {
-      Name = "{var.project_name}-private_data_subnet_az1"
+      Name = "${var.project_name}-private_data_subnet_az1"
     }
 
 }
@@ -122,7 +122,7 @@ resource "aws_subnet" "private_data_subnet_az2" {
     availability_zone = data.aws_availability_zones.availability_zones.names[0]
 
     tags = {
-      Name = "{var.project_name}-private_data_subnet_az2"
+      Name = "${var.project_name}-private_data_subnet_az2"
     }
 
 }
