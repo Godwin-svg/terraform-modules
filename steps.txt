@@ -1,0 +1,23 @@
+1 - create modules repository in github call terraform-modules
+then add modules/vpc folder, then add the following file  next : 
+- main.tf
+- variables.tf
+- output.tf
+
+2 - create project folder on github call rentzone
+then add the following file :
+- main.tf
+refence the sources modules and add its variables
+- variable.tf
+- terraform.tfvars
+- backend.tf
+- provider.tf 
+
+- How to your start your vpc
+- terraform fmt
+- terraform init ( if error) run=
+- terraform get -update
+- terraform init -upgrade 
+
+
+
