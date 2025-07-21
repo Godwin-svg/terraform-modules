@@ -30,7 +30,7 @@ output "internet_gateway" {
 
 # public subnet az1 id 
 output "public_subnet_az1_id" {
-    value = aws_subnet.private_app_subnet_az1.id 
+    value = aws_subnet.public_subnet_az1.id 
 }
 
 # public subnet az2  id
