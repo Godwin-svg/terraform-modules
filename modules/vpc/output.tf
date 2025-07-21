@@ -49,7 +49,7 @@ output "private_app_subnet_az2_id" {
 }
 
 # private data subnet az1 id  
-output "private_data_subnet_az1_cidr" {
+output "private_data_subnet_az1_id" {
     value = aws_subnet.private_data_subnet_az1.id 
 }
 
